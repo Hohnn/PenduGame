@@ -1,5 +1,10 @@
+body {
+    background-color: rgb(31, 31, 31);
+}
+
 button {
-    width: 7.2vw;
+    width: 7vw;
+    margin: 2px;
 }
 
 .wordBorder {
@@ -8,27 +13,100 @@ button {
     text-align: center;
 }
 
-.animation {
-    width: 125px;
-    height: 125px;
-    /* background-color: brown; */
-    overflow: hidden;
+.containerAnimation {
+    width: 100%;
+    height: 60vh;
     position: relative;
+    overflow: hidden;
 }
 
-.spritesheet {
+.back {
     position: absolute;
-    
-    animation: moveSpritesheet 2s steps(14) infinite;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    animation: backImage 5s infinite linear;
 }
 
-@keyframes test {
+.vessel {
+    position: absolute;
+    width: 40vw;
+    bottom: 10vw;
+    left: -5vw;
+    animation: vessel 4s infinite ease-in-out ;
+    z-index: 10;
+}
+
+.containerAnimation::after {
+    content: '';
+    position: absolute;
+    width: 10vw;
+    height: 1vw;
+    background-color: rgba(36, 49, 49, 0.116);
+    border-radius: 50%;
+    bottom:  4vw;
+    left: 15%;
+    animation: vessel2 4s infinite ease-in-out ;
+}
+
+@keyframes vessel2 {
     0% {
-        transform: translateX(0px);
+        transform: translateY( 0);
+    }
+    50% {
+        transform: translateY( 40px);
     }
     100% {
-        transform: translateX(-100px);
+        transform: translateY( 0);
     }
+}
+@keyframes vessel {
+    0% {
+        transform: translate(0, 0);
+    }
+    
+    50% {
+        transform: translate(-40px, 40px);
+    }
+    
+    100% {
+        transform: translate(0, 0);
+    }
+}
+.back2 {
+    left: 99.9%;
+}
+
+@keyframes backImage {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animation {
+    width: 22vw;
+    height: 10vw;
+    /* background-color: brown; */
+    overflow: hidden;
+    position: absolute;
+    left: -1vw;
+    bottom: 15.7vw;
+    animation: vessel 4s infinite ease-in-out ;
+}
+
+
+.booster {
+    position: absolute;
+    height: 5.5vw;
+    animation: moveSpritesheet 1s linear infinite;
+}
+
+.booster2 {
+    left: 88%;
 }
 
 @keyframes moveSpritesheet {
@@ -36,6 +114,6 @@ button {
        transform: translate3d(0,0,0)
     }
     to {
-       transform: translate3d(-101.5%,0,0)
+       transform: translate3d(-100%,0,0)
     }
  }

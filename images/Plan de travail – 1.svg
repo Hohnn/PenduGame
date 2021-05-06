@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1504" height="971" viewBox="0 0 1504 971">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.284" y1="0.566" x2="0.891" y2="0.888" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#333"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#25c1e1"/>
+      <stop offset="1" stop-color="#711313"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.082" y1="0.381" x2="0.264" y2="0.864" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="-0.307" y1="0.63" x2="0.709" y2="0.465" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#66d5ec" stop-opacity="0"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff4600"/>
+      <stop offset="1" stop-color="#e1e1e1" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="0.5" y1="0.766" x2="0.5" y2="1.244" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4d130c"/>
+      <stop offset="1" stop-color="red"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#574e59"/>
+      <stop offset="1" stop-color="#711313"/>
+    </linearGradient>
+    <clipPath id="clip-Plan_de_travail_1">
+      <rect width="1504" height="971"/>
+    </clipPath>
+  </defs>
+  <g id="Plan_de_travail_1" data-name="Plan de travail – 1" clip-path="url(#clip-Plan_de_travail_1)">
+    <path id="Polygone_11" data-name="Polygone 11" d="M250.5,0,501,735H0Z" transform="translate(1261 235) rotate(90)" opacity="0.16" fill="url(#linear-gradient)"/>
+    <path id="Polygone_1" data-name="Polygone 1" d="M173.5,0,347,509H0Z" transform="translate(1261 312) rotate(90)" fill="url(#linear-gradient-2)"/>
+    <path id="Polygone_10" data-name="Polygone 10" d="M250.5,0,501,735H0Z" transform="translate(1261 235) rotate(90)" opacity="0.16" fill="url(#linear-gradient-3)"/>
+    <path id="Polygone_5" data-name="Polygone 5" d="M173.5,0,347,509H0Z" transform="translate(1261 312) rotate(90)" opacity="0.48" fill="url(#linear-gradient-4)"/>
+    <path id="Polygone_9" data-name="Polygone 9" d="M121,0,242,239H0Z" transform="translate(803 365) rotate(90)" fill="url(#linear-gradient-5)"/>
+    <path id="Polygone_3" data-name="Polygone 3" d="M91,0l91,180H0Z" transform="translate(932 395) rotate(90)" fill="rgba(0,0,0,0.24)"/>
+    <path id="Polygone_6" data-name="Polygone 6" d="M54.5,0,109,114H0Z" transform="translate(809 431) rotate(90)" fill="url(#linear-gradient-6)"/>
+    <path id="Polygone_7" data-name="Polygone 7" d="M42.5,0,85,89H0Z" transform="translate(809 443) rotate(90)" fill="rgba(0,0,0,0.24)"/>
+    <path id="Polygone_2" data-name="Polygone 2" d="M91,0l91,191H0Z" transform="translate(914 395) rotate(90)" fill="url(#linear-gradient-7)"/>
+  </g>
+</svg>
