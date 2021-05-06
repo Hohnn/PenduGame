@@ -1,0 +1,9 @@
+button {
+    width: 7.2vw;
+}
+
+.wordBorder {
+    border-bottom: 2px solid black;
+    width: 20px;
+    text-align: center;
+}
