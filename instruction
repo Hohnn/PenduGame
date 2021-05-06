@@ -1,4 +1,6 @@
 const myWords = []
+const 2niveau = [myWord, myWord2,  ]
+2niveau[0][0]
 
 random()
 
