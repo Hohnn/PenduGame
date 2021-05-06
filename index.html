@@ -9,11 +9,36 @@
     <title>Pixel Pendu</title>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid position-relative">
         <div class="row">
             <div class="col containerAnimation">
-                <img class="back" src="./images/game_background_1.png" alt="">
-                <img class="back back2" src="./images/game_background_1.png" alt="">
+                <div class="backback">
+                    <img src="./images/sky.png" alt="">
+                    <img src="./images/clouds_1.png" alt="">
+                    <img src="./images/rocks_1.png" alt="">
+                    <img src="./images/clouds_2.png" alt="">
+                </div>
+                <div class="back">                    
+                                     
+                    <img src="./images/clouds_3.png" alt="">
+                    <img src="./images/rocks_2.png" alt="">
+                    <img src="./images/clouds_4.png" alt="">  
+                    
+                </div>
+                <div class="backback back2">
+                    <img src="./images/sky.png" alt="">
+                    <img src="./images/clouds_1.png" alt="">
+                    <img src="./images/rocks_1.png" alt="">
+                    <img src="./images/clouds_2.png" alt="">
+                </div>
+                <div class="back back2">
+                                        
+                    <img src="./images/clouds_3.png" alt="">
+                    <img src="./images/rocks_2.png" alt="">
+                    <img src="./images/clouds_4.png" alt="">
+                    
+                </div>                
+                
                 <img class="vessel" src="./images/Plan de travail – 1.svg" alt="">
                 <div class="animation">
                     
@@ -22,23 +47,18 @@
 
 
                 </div>
-            </div>
-        </div>
-        <div class="row my-5">
-            <div class="col ">
-                <div class="indice" id="indice">
 
-
+                <div class="output ">
+                    <div class="indice" id="indice">
+    
+    
+                    </div>
+                    <div class="Word border d-flex justify-content-center" id="word">
+                        <div class="wordBorder">E</div>
+    
+    
+                    </div>
                 </div>
-                <div class="Word border d-flex justify-content-center" id="word">
-                    <div class="wordBorder">E</div>
-
-
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
                 <div class="clavier text-center">
                     <button type="button" data-button="letter" data-translate="A">A</button>
                     <button type="button" data-button="letter" data-translate="Z">Z</button>
@@ -67,6 +87,14 @@
                     <button type="button" data-button="letter" data-translate="B">B</button>
                     <button type="button" data-button="letter" data-translate="N">N</button>
                 </div>
+            </div>
+        </div>
+        <div class="row my-5">
+            
+        </div>
+        <div class="row">
+            <div class="col">
+                
             </div>
         </div>
     </div>

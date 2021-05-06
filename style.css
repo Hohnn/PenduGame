@@ -2,9 +2,38 @@ body {
     background-color: rgb(31, 31, 31);
 }
 
+.clavier {
+    position: absolute;
+    bottom: 2vw;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    max-width: 500px;
+}
+
+.clavier:hover button {
+    background-color: rgba(255, 255, 255, 0.644);
+} 
+
 button {
-    width: 7vw;
-    margin: 2px;
+    width: 40px;
+    margin: 4px 2px;
+    font-weight: bold;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.199);
+    color: teal;
+    text-shadow: 0 0 10px  rgba(0, 0, 0, 0.479);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgba(58, 58, 58, 0.658) !important;
+    box-shadow: 0 0 5px 4px rgba(22, 22, 22, 0.281) ;
+}
+
+button:active {
+    background-color: rgb(192, 39, 39) !important;
+    box-shadow: 0 0 5px 4px rgba(247, 23, 23, 0.281) ;    
 }
 
 .wordBorder {
@@ -15,7 +44,7 @@ button {
 
 .containerAnimation {
     width: 100%;
-    height: 60vh;
+    height: 50vw;
     position: relative;
     overflow: hidden;
 }
@@ -23,10 +52,15 @@ button {
 .back {
     position: absolute;
     left: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
+    height: 100%;
     animation: backImage 5s infinite linear;
+}
+
+.back img {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 .vessel {
@@ -75,7 +109,7 @@ button {
     }
 }
 .back2 {
-    left: 99.9%;
+    left: 99.9% !important;
 }
 
 @keyframes backImage {
@@ -116,4 +150,31 @@ button {
     to {
        transform: translate3d(-100%,0,0)
     }
+ }
+
+ .rock1 {
+    animation: rock 5s infinite linear;
+ }
+
+ @keyframes rock {
+     0% {
+        transform: translate3d(0,0,0)
+     }
+     100% {
+        transform: translate3d(10%,0,0)
+     }
+ }
+
+ .backback {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: backImage 6s infinite linear;
+    z-index: -1;
+ }
+ .backback img {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
  }
