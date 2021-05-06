@@ -7,3 +7,35 @@ button {
     width: 20px;
     text-align: center;
 }
+
+.animation {
+    width: 125px;
+    height: 125px;
+    /* background-color: brown; */
+    overflow: hidden;
+    position: relative;
+}
+
+.spritesheet {
+    position: absolute;
+    
+    animation: moveSpritesheet 2s steps(14) infinite;
+}
+
+@keyframes test {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes moveSpritesheet {
+    from {
+       transform: translate3d(0,0,0)
+    }
+    to {
+       transform: translate3d(-101.5%,0,0)
+    }
+ }
