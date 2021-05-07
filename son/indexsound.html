@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Pixel Pendu</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="animation">
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="indice" id="indice">
+                    
+
+                </div>
+                <div class="Word2 border d-flex justify-content-center"  id="word"> hg
+                    <div class="wordBorder" type="text">E</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="clavier text-center">
+                    <button type="button" data-button="letter" data-translate="A">A</button>
+                    <button type="button" data-button="letter" data-translate="Z">Z</button>
+                    <button type="button" data-button="letter" data-translate="E">E</button>
+                    <button type="button" data-button="letter" data-translate="R">R</button>
+                    <button type="button" data-button="letter" data-translate="T">T</button>
+                    <button type="button" data-button="letter" data-translate="Y">Y</button>
+                    <button type="button" data-button="letter" data-translate="U">U</button>
+                    <button type="button" data-button="letter" data-translate="I">I</button>
+                    <button type="button" data-button="letter" data-translate="O">O</button>
+                    <button type="button" data-button="letter" data-translate="P">P</button>
+                    <button type="button" data-button="letter" data-translate="Q">Q</button>
+                    <button type="button" data-button="letter" data-translate="S">S</button>
+                    <button type="button" data-button="letter" data-translate="D">D</button>
+                    <button type="button" data-button="letter" data-translate="F">F</button>
+                    <button type="button" data-button="letter" data-translate="G">G</button>
+                    <button type="button" data-button="letter" data-translate="H">H</button>
+                    <button type="button" data-button="letter" data-translate="J">J</button>
+                    <button type="button" data-button="letter" data-translate="K">K</button>
+                    <button type="button" data-button="letter" data-translate="L">L</button>
+                    <button type="button" data-button="letter" data-translate="M">M</button>
+                    <button type="button" data-button="letter" data-translate="W">W</button>
+                    <button type="button" data-button="letter" data-translate="X">X</button>
+                    <button type="button" data-button="letter" data-translate="C">C</button>
+                    <button type="button" data-button="letter" data-translate="V">V</button>
+                    <button type="button" data-button="letter" data-translate="B">B</button>
+                    <button type="button" data-button="letter" data-translate="N">N</button>
+                    <button type="button" id="grostest"> 
+                    <audio id="beginning1" src="backgroundsound.mp3"></audio>
+                    Start</button>
+                    <button type="button" id="easy"> Easy</button>
+                    <button type="button" id="normal"> Normal</button>
+                    <button type="button" id="hard"> Hard</button>
+                     <button type="button" id="testson" value="play"> test du son
+                        <audio id="beginning" src="son1.wav"></audio>
+                     </button>
+                     <audio id="blaster" src="son3.wav"></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const myWords =[
+            "BONJOUR",
+            "AUREVOIR",
+            "SALUT",
+            "HELLO",
+            "HOLA",
+        ]
+        var word = document.getElementById("word");
+        let wordselected;
+        let wordLength;
+        const letterOne = document.querySelectorAll('button[data-button="letter"]');
+
+     
+        // PAS FINI !! au click lancer une recherche aléatoire des mots, puis afficher le mot selectionné au tableau
+        
+        document.getElementById("grostest").addEventListener("click", recommence);
+
+        function recommence(){
+        
+            var audio = document.getElementById("beginning1");
+        audio.play();
+        
+            var el = document.getElementById( "word" );
+        while (el.firstChild){
+            el.removeChild(el.firstChild);
+        }
+        let randomisation = Math.floor(Math.random()*myWords.length);
+        console.log(randomisation)
+        if (wordselected == myWords[randomisation]){
+            if(randomisation == 0){randomisation++} else{randomisation--} }
+        wordselected = myWords [randomisation];
+        wordLength = wordselected.length;
+        console.log(wordselected);
+        console.log(wordLength);
+    for (i = 0; i < wordLength; i++) {
+    console.log(wordselected);
+        let newdiv = document.createElement("div");
+        newdiv.className = "wordBorder transparent" ;
+        word.append(newdiv);
+        newdiv.innerHTML= wordselected[i];
+
+    for (let i = 0; i < letterOne.length; i++) {
+        letterOne[i].classList.remove("transparent2");
+        letterOne[i].classList.remove("false");
+
+        
+    }
+}
+}
+
+
+        // mettre les bouton dans la constante letterOne
+            let myWin = 0;
+            let myloose=0;
+            let perdu;
+            let gg = 0
+            let difficulty = 8
+        // recupérer la lettre en cliquant sur le bouton
+     letterOne.forEach(element => (
+           element.addEventListener("click", function(){
+            var audio = document.getElementById("blaster");
+        audio.play();
+
+
+               let letter = this.dataset.translate;
+               console.log(word)
+
+               for (let i = 0; i < wordLength; i++) {
+                   console.log(element)
+                   console.log(word.childNodes[i].innerHTML)
+                   if (element.innerHTML==word.childNodes[i].innerHTML) {
+                       console.log("ca marche")
+                       word.childNodes[i].classList.remove("transparent");
+                    element.classList.add("transparent2");
+                    myWin++ 
+                   } else {
+                    element.classList.add("false");
+                     gg = 1
+
+                    }
+                   } 
+                    if (gg==1) {
+                        myloose++
+                    }  
+                    if (myWin==wordLength) {
+                    alert("t'as gagné")
+                    recommence(); 
+                    myWin =0;
+                    myloose=0;  
+               }
+               console.log(myloose);
+               if (myloose==difficulty) {
+                        alert("t'as perdu")
+                        recommence();
+                        myWin =0;
+                    myloose=0; 
+                    } 
+               }
+              
+            ) 
+         ));
+
+         let hard = document.getElementById("hard")
+         hard.addEventListener("click", () => {
+             difficulty = 5;
+             hard.classList.add ("difficulty");
+        })
+
+        let easy = document.getElementById("easy")
+         easy.addEventListener("click", () => {
+             difficulty = 12;
+             easy.classList.add ("difficulty");
+        })
+
+        let normal = document.getElementById("normal")
+         normal.addEventListener("click", () => {
+             difficulty = 8;
+             normal.classList.add ("difficulty");
+        })
+
+    </script>
+
+    <script src="./script.js"></script>
+</body>
+</html>

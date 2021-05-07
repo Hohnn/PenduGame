@@ -59,31 +59,34 @@ let myloose = 0;
 let perdu;
 let gg = 0
 let difficulty = 8
+const ennemi = document.getElementById("ennemi")
 // recupérer la lettre en cliquant sur le bouton
 letterOne.forEach(element => (
     element.addEventListener("click", function () {
             let letter = this.dataset.translate;
             console.log(word)
+            shoot.classList.remove('anim')
+                        void shoot.offsetWidth; 
+                        shoot.classList.add('anim')
             
             for (let i = 0; i < wordLength; i++) {
                 console.log(element)
                 console.log(word.childNodes[i].innerHTML)
                 if (element.innerHTML == word.childNodes[i].innerHTML) {
                     console.log("ca marche")
+                        
                     setTimeout(function(){
-                        shoot.classList.remove('anim')
-            void shoot.offsetWidth; 
-            shoot.classList.add('anim') 
+                         
                         word.childNodes[i].classList.remove("transparent");
-                    element.classList.add("transparent2");
+                        element.classList.add("transparent2");
+                        ennemi.classList.remove('hit')
+                        void ennemi.offsetWidth;
+                        ennemi.classList.add('hit')
                      }, 900);
-                     element.classList.remove("false");
+                        
                     myWin++
                 } else {
-                    shoot.classList.remove('nul')
-            void shoot.offsetWidth; 
-            shoot.classList.add('nul')
-                    element.classList.add("false");
+                    element.classList.add("transparent2");
                     gg = 1
 
                 }

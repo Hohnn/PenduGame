@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1848" height="1065" viewBox="0 0 1848 1065">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.463" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff4f00"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.5" y1="0.621" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#e14500"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.5" y1="0.621" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#110f03"/>
+      <stop offset="1" stop-color="#e14500"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="0.022" y1="0.918" x2="0.834" y2="0.913" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#535151"/>
+      <stop offset="1" stop-color="#3e3e3e"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="0.036" x2="0.933" y2="1.056" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3c3c3b"/>
+      <stop offset="1" stop-color="#7c7c7c"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="0.401" y1="1.075" x2="0.441" y2="-0.204" xlink:href="#linear-gradient-6"/>
+    <linearGradient id="linear-gradient-8" x1="1.015" y1="1.9" x2="-0.573" y2="-3.098" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ebebd3"/>
+      <stop offset="1" stop-color="#7b6b24"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-9" x1="0.746" y1="1.125" x2="-0.04" y2="-2.447" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ebebd3"/>
+      <stop offset="1" stop-color="#76766a"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-10" x1="1.27" y1="0.397" x2="0.199" y2="0.63" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d56b0f"/>
+      <stop offset="1" stop-color="#393939"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-11" x1="0.5" y1="-0.8" x2="0.5" y2="0.412" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <clipPath id="clip-ship2">
+      <rect width="1848" height="1065"/>
+    </clipPath>
+  </defs>
+  <g id="ship2" clip-path="url(#clip-ship2)">
+    <path id="Tracé_10" data-name="Tracé 10" d="M89,0l89,289H0Z" transform="translate(531.5 555.5) rotate(90)" opacity="0.17" fill="url(#linear-gradient)"/>
+    <path id="Tracé_11" data-name="Tracé 11" d="M89,0l71.636,232.617L144.3,283.006,0,289Z" transform="translate(531.5 412.5) rotate(90)" opacity="0.28" fill="url(#linear-gradient)"/>
+    <path id="Polygone_1" data-name="Polygone 1" d="M58,0l58,188H0Z" transform="translate(531.5 443.5) rotate(90)" fill="url(#linear-gradient-3)"/>
+    <path id="Polygone_2" data-name="Polygone 2" d="M58,0l58,188H0Z" transform="translate(531.5 586.5) rotate(90)" fill="url(#linear-gradient-4)"/>
+    <path id="Tracé_9" data-name="Tracé 9" d="M210,0,420,590H0Z" transform="translate(985.5 365.5) rotate(90)" fill="url(#linear-gradient-5)"/>
+    <path id="Tracé_1" data-name="Tracé 1" d="M-210.287,0H847.242l302.711,221.17L1083.186,284H-210.287Z" transform="translate(606.047 432)" fill="url(#linear-gradient-6)"/>
+    <path id="Tracé_5" data-name="Tracé 5" d="M-210.287,0H847.242l302.711,221.17L1087.388,284H-210.287" transform="translate(606.047 432)" opacity="0.47" fill="url(#linear-gradient-7)"/>
+    <path id="Tracé_2" data-name="Tracé 2" d="M-183.035,0,232.542,11.58l318.8,75.852H-3.341Z" transform="translate(739.655 344.567)" fill="url(#linear-gradient-8)"/>
+    <path id="Tracé_3" data-name="Tracé 3" d="M297.515-98.748H816.7l54.327,27.269L-150.368,54.187Z" transform="translate(532 787)" fill="url(#linear-gradient-9)"/>
+    <path id="Tracé_4" data-name="Tracé 4" d="M286.7-106.789,344.6-80.72-679.49,45.5Z" transform="translate(1062 795)" opacity="0.15"/>
+    <path id="Tracé_7" data-name="Tracé 7" d="M217.124,273.526l302.512,90.333H395.689Z" transform="translate(344 71)" opacity="0.06"/>
+    <path id="Tracé_6" data-name="Tracé 6" d="M1367.474,444.675l106.138,78.408-64.065,61.2H1243.168Z" transform="translate(282 130)" opacity="0.27" fill="url(#linear-gradient-10)"/>
+    <path id="Tracé_8" data-name="Tracé 8" d="M254.366,95.092,1430.409,96.1l-48.9,59.9H1255.8l-54.532-29.832H680.423L601.969,156H445.633L254.366,223.127V95.092Z" transform="translate(145 560)" opacity="0.07" fill="url(#linear-gradient-11)"/>
+  </g>
+</svg>
