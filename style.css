@@ -13,7 +13,7 @@ body {
 
 .clavier:hover button {
     background-color: rgba(255, 255, 255, 0.644);
-} 
+}
 
 button {
     width: 40px;
@@ -37,9 +37,18 @@ button:active {
 }
 
 .wordBorder {
-    border-bottom: 2px solid black;
-    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.692);
+    width: 100%;
     text-align: center;
+    margin: 1vw;
+    font-size: 4vw;
+    font-weight: bold;
+    transition: opacity 0.4s;
+    
 }
 
 .containerAnimation {
@@ -178,3 +187,121 @@ button:active {
     width: 100%;
     bottom: 0;
  }
+
+
+ .restart button {
+     opacity: 1 !important; 
+ }
+
+
+ .word2{
+    border 2px solid black;
+    height: 30px;
+}
+
+.transparent{
+    color: rgba(255, 0, 0, 0);
+}
+.transparent2{
+    opacity: 0;
+}
+.false{
+    background-color: red !important;
+}
+.difficulty{
+background-color: rgb(116, 248, 116);
+}
+
+.start {
+    position: absolute;
+    top: 0;
+    width: 50vw;
+}
+
+.start button {
+    width: unset;
+}
+
+.output {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    animation: vessel 8s infinite ease-in-out ;
+}
+
+.shoot {
+    position: absolute;
+    background-color: turquoise;
+    width: 50px;
+    height: 5px;
+    border-radius: 50%;
+    top: 26.7vw;
+    left: 23vw;
+    box-shadow: -10px  0 10px 5px rgba(64, 224, 208, 0.603);
+    animation: vessel 4s infinite ease-in-out forwards ;
+
+
+}
+
+.shoot.anim {
+    opacity: 0;
+    animation: shooter 1s linear ;
+    z-index: 10;
+}
+.shoot.nul {
+    opacity: 0;
+    animation: shooterNul 3s linear ;
+    z-index: 10;
+}
+
+@keyframes shooter {
+    0% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: translateX(35vw);
+        opacity: 0.8;
+    }
+}
+@keyframes shooterNul {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100vw);
+        opacity: 0.8;
+    }
+}
+
+.Word {
+    width: 38vw;
+    height: 7vw;
+    top: 40%;
+    left: /2vw;
+    transform: translateY(-50%);
+    position: relative;
+    
+}
+
+.ennemi {
+    width: 50vw;
+    height: 20vw;
+    top: 40%;
+    left: -8vw;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.containerAnimation::before {
+    content: '';
+    position: absolute;
+    width: 50vw;
+    height: 1vw;
+    background-color: rgba(36, 36, 36, 0.116);
+    border-radius: 50%;
+    bottom:  4vw;
+    left: 60%;
+    animation: vessel2 8s infinite ease-in-out ;
+    z-index: 100;
+}

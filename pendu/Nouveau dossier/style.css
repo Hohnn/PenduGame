@@ -1,0 +1,29 @@
+button {
+    width: 7.2vw;
+}
+
+.wordBorder {
+    border-bottom: 2px solid black;
+    width: 30px;
+    text-align: center;
+    margin: 2px;
+    border-radius: 3px;
+}
+
+.word2{
+    border 2px solid black;
+    height: 30px;
+}
+
+.transparent{
+    color: red;
+}
+.transparent2{
+    opacity: 0;
+}
+.false{
+    background-color: red;
+}
+.difficulty{
+background-color: green;
+}
