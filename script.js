@@ -9,16 +9,31 @@ const myWords = [
 var word = document.getElementById("word");
 let wordselected;
 let wordLength;
+const output = document.getElementById('output')
 const letterOne = document.querySelectorAll('button[data-button="letter"]');
 const shoot = document.getElementById('shoot')
-
-
+const retry = document.getElementById("retry")
+const myblur = document.getElementById("blur")
+const finish = document.getElementById("finish")
+const finishState = document.getElementById("finishState")
+retry.addEventListener('click', () => {
+    recommence()
+    myblur.classList.remove('blur')
+    finish.classList.add('d-none')
+    output.classList.remove('crash')
+})
 // PAS FINI !! au click lancer une recherche aléatoire des mots, puis afficher le mot selectionné au tableau
-
-document.getElementById("grostest").addEventListener("click", recommence);
+const start = document.getElementById("start")
+start.addEventListener("click", () => {
+    recommence()
+    start.innerHTML = 'RESTART'
+    output.classList.add('starting')
+});
 
 function recommence() {
-
+    myloose = 0
+    myWin = 0
+    miss2.innerHTML = 'Misses : 0'
     var el = document.getElementById("word");
     while (el.firstChild) {
         el.removeChild(el.firstChild);
@@ -60,58 +75,69 @@ let perdu;
 let gg = 0
 let difficulty = 8
 const ennemi = document.getElementById("ennemi")
+const miss2 = document.getElementById('miss2')
 // recupérer la lettre en cliquant sur le bouton
 letterOne.forEach(element => (
     element.addEventListener("click", function () {
             let letter = this.dataset.translate;
             console.log(word)
             shoot.classList.remove('anim')
-                        void shoot.offsetWidth; 
-                        shoot.classList.add('anim')
-            
+            void shoot.offsetWidth;
+            shoot.classList.add('anim')
+            gg = 0
             for (let i = 0; i < wordLength; i++) {
                 console.log(element)
+                
                 console.log(word.childNodes[i].innerHTML)
                 if (element.innerHTML == word.childNodes[i].innerHTML) {
                     console.log("ca marche")
-                        
-                    setTimeout(function(){
-                         
+
+                    setTimeout(function () {
+
                         word.childNodes[i].classList.remove("transparent");
                         element.classList.add("transparent2");
                         ennemi.classList.remove('hit')
                         void ennemi.offsetWidth;
                         ennemi.classList.add('hit')
-                     }, 900);
-                        
+                    }, 900);
+                    
                     myWin++
                 } else {
-                    element.classList.add("transparent2");
-                    gg = 1
+                    element.classList.add("false");
+                    gg++
 
                 }
             }
-            if (gg == 1) {
+            if (gg == wordLength) {
                 myloose++
+                miss2.innerHTML = 'Misses : ' + myloose
+
             }
             if (myWin == wordLength) {
-                alert("t'as gagné")
-                recommence();
                 myWin = 0;
                 myloose = 0;
+                finishState.innerHTML = 'You Win ! <br>' + wordselected + ' is destroy'
+                finish.classList.remove('d-none')
+                myblur.classList.add('blur')
+                output.classList.add('crash')
+                
             }
             console.log(myloose);
             if (myloose == difficulty) {
-                alert("t'as perdu")
-                recommence();
                 myWin = 0;
                 myloose = 0;
+                finishState.innerHTML = 'You fail ! <br> The enemy was ' + wordselected
+                finish.classList.remove('d-none')
+                myblur.classList.add('blur')
+
             }
-            
+
         }
 
     )
 ));
+
+const miss = document.getElementById('miss')
 
 let hard = document.getElementById("hard")
 hard.addEventListener("click", () => {
@@ -119,6 +145,7 @@ hard.addEventListener("click", () => {
     hard.classList.add("difficulty");
     easy.classList.remove("difficulty");
     normal.classList.remove("difficulty");
+    miss.innerHTML = 'Misses allowed : ' + difficulty
 })
 
 let easy = document.getElementById("easy")
@@ -127,6 +154,7 @@ easy.addEventListener("click", () => {
     easy.classList.add("difficulty");
     hard.classList.remove("difficulty");
     normal.classList.remove("difficulty");
+    miss.innerHTML = 'Misses allowed : ' + difficulty
 })
 
 let normal = document.getElementById("normal")
@@ -135,4 +163,5 @@ normal.addEventListener("click", () => {
     normal.classList.add("difficulty");
     easy.classList.remove("difficulty");
     hard.classList.remove("difficulty");
+    miss.innerHTML = 'Misses allowed : ' + difficulty
 })

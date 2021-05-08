@@ -9,7 +9,12 @@
     <title>Pixel Pendu</title>
 </head>
 <body>
-    <div class="container-fluid position-relative">
+    <div class="finish d-none" id="finish">
+        <p id="finishState">Win Loose</p>
+        <button type="button" id="retry">RETRY</button>
+    </div>
+    <div class="container-fluid position-relative" id="blur">
+        
         <div class="row">
             <div class="col containerAnimation">
                 <div class="backback">
@@ -47,7 +52,7 @@
                     </div>
                 </div>
 
-                <div class="output ">
+                <div class="output" id="output">
                     <div class="indice" id="indice">
     
     
@@ -92,16 +97,10 @@
                     <button type="button" id="easy"> Easy</button>
                     <button type="button" class="difficulty" id="normal"> Normal</button>
                     <button type="button" id="hard"> Hard</button>
-                    <button type="button" class="ms-auto" id="grostest"> Start</button>
+                    <button type="button" class="ms-auto" id="start"> START</button>
                 </div>
-                
-            </div>
-        </div>
-        <div class="row my-5">
-            
-        </div>
-        <div class="row">
-            <div class="col">
+                <div class="miss" id="miss">Misses allowed : 8</div>
+                <div class="miss2" id="miss2">Misses : 0</div>
                 
             </div>
         </div>
