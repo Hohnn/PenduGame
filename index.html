@@ -13,35 +13,38 @@
         <p id="finishState">Win Loose</p>
         <button type="button" id="retry">RETRY</button>
     </div>
-    <div class="container-fluid position-relative" id="blur">
+    <div class="title">HANGED GAME</div>
+    <div class="h-100 position-relative d-flex flex-column justify-content-center over" id="blur">
         
-        <div class="row">
-            <div class="col containerAnimation">
-                <div class="backback">
-                    <img src="./images/sky.png" alt="">
-                    <img src="./images/clouds_1.png" alt="">
-                    <img src="./images/rocks_1.png" alt="">
-                    <img src="./images/clouds_2.png" alt="">
-                </div>
-                <div class="back">                    
-                                     
-                    <img src="./images/clouds_3.png" alt="">
-                    <img src="./images/rocks_2.png" alt="">
-                    <img src="./images/clouds_4.png" alt="">  
+        <div class="">
+            <div class="containerAnimation">
+                <div class="background">
+                    <div class="backback">
+                        <img src="./images/sky.png" alt="">
+                        <img src="./images/clouds_1.png" alt="">
+                        <img src="./images/rocks_1.png" alt="">
+                        <img src="./images/clouds_2.png" alt="">
+                    </div>
+                    <div class="back">
                     
-                </div>
-                <div class="backback back2">
-                    <img src="./images/sky.png" alt="">
-                    <img src="./images/clouds_1.png" alt="">
-                    <img src="./images/rocks_1.png" alt="">
-                    <img src="./images/clouds_2.png" alt="">
-                </div>
-                <div class="back back2">
-                                        
-                    <img src="./images/clouds_3.png" alt="">
-                    <img src="./images/rocks_2.png" alt="">
-                    <img src="./images/clouds_4.png" alt="">
+                        <img src="./images/clouds_3.png" alt="">
+                        <img src="./images/rocks_2.png" alt="">
+                        <img src="./images/clouds_4.png" alt="">
                     
+                    </div>
+                    <div class="backback back2">
+                        <img src="./images/sky.png" alt="">
+                        <img src="./images/clouds_1.png" alt="">
+                        <img src="./images/rocks_1.png" alt="">
+                        <img src="./images/clouds_2.png" alt="">
+                    </div>
+                    <div class="back back2">
+                    
+                        <img src="./images/clouds_3.png" alt="">
+                        <img src="./images/rocks_2.png" alt="">
+                        <img src="./images/clouds_4.png" alt="">
+                    
+                    </div>
                 </div>                
                 <div class="shoot" id="shoot"></div>
                 <div class="groupeShip">
@@ -53,10 +56,7 @@
                 </div>
 
                 <div class="output" id="output">
-                    <div class="indice" id="indice">
-    
-    
-                    </div>
+                    
                     <div class="groupeOutput">
                         <img class="ennemi" id="ennemi" src="./images/ship2.svg" alt="">
                         <div class="Word d-flex" id="word">
@@ -98,7 +98,8 @@
                     <button type="button" class="difficulty" id="normal"> Normal</button>
                     <button type="button" id="hard"> Hard</button>
                     <button type="button" id="soundMute" class="mute"><i class="fas fa-volume-mute"></i></button>
-                    <button type="button" class="ms-auto startButton" id="start"> START</button>
+                    <button type="button" class="mx-auto startButton" id="start"> START</button>
+                    <div class="indice ms-auto me-3 mt-2" id="indice"> </div>
                 </div>
                 <div class="miss" id="miss">Misses allowed : 7</div>
                 <div class="miss2" id="miss2">Misses : 0</div>

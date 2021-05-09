@@ -7,8 +7,9 @@ const myWords = [
 ]
 
 const game = ["FORTNITE", "BIOSHOCK", "DISHONORED", "BLOODBORNE", "MINECRAFT", "HADES", "TETRIS", "NIER"]
+const city = ["TOKYO", "SHANGAI", "OSAKA", "ISTANBUL", "MOSCOW", "PARIS", "SEOUL", "LONDON", "CHICAGO", "MADRID"]
 
-const cLaMerde = [myWords, game]
+const cLaMerde = [game, city]
 
 var word = document.getElementById("word");
 let wordselected;
@@ -20,6 +21,7 @@ const retry = document.getElementById("retry")
 const myblur = document.getElementById("blur")
 const finish = document.getElementById("finish")
 const finishState = document.getElementById("finishState")
+const indice = document.getElementById("indice")
 retry.addEventListener('click', () => {
     recommence()
     myblur.classList.remove('blur')
@@ -37,6 +39,7 @@ start.addEventListener("click", () => {
 });
 
 function recommence() {
+    
     myloose = 0
     myWin = 0
     miss2.innerHTML = 'Misses : 0'
@@ -49,6 +52,11 @@ function recommence() {
     
     console.log(randomisation)
     console.log(randomisationListe)
+    if (randomisationListe == 0) {
+        indice.innerHTML = 'Tip : GAMES'
+    } else if (randomisationListe == 1) {
+        indice.innerHTML = 'Tip : CITY'
+    }
     if (wordselected == cLaMerde[randomisationListe][randomisation]) {
         if (randomisation == 0) {
             randomisation++
@@ -171,9 +179,18 @@ function playBgSound() {
 }
 
 const mute = document.getElementById('soundMute')
+let o = 0
 mute.addEventListener('click', () => {
-    stopBgSound()
+    if (o == 0) {
+        stopBgSound()
+        o = 1
+    } else {
+        playBgSound()
+        o = 0
+    }
+    mute.classList.toggle('difficulty')
 })
+
 function stopBgSound() {
     bgSound.pause()
     bgSound.currentTime = 0;
@@ -193,6 +210,6 @@ function shot() {
 const finishSound = document.getElementById("finishSound")
 function finishAudio() {
     finishSound.play()
-    finishSound.volume = 0.15
+    finishSound.volume = 0.14
 }
 
