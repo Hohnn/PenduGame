@@ -213,7 +213,7 @@ background-color: rgb(116, 248, 116);
     z-index: 1000;
 }
 
-.start button:last-child {
+.start .startButton {
     padding: 0 20px;
     background-color: rgb(173, 54, 54);
     color: white;
@@ -233,11 +233,15 @@ background-color: rgb(116, 248, 116);
     position: absolute;
     top: 3vw;
     left: 1vw;
+    font-weight: bold;
+    opacity: 0.8;
 }
 .miss2 {
     position: absolute;
     top: 4.5vw;
     left: 1vw;
+    font-weight: bold;
+    opacity: 0.8;
 }
 
 
@@ -345,6 +349,19 @@ background-color: rgb(116, 248, 116);
     }
     to{
         transform: translate(10%, 100%);
+    }
+}
+
+.go {
+    animation: goOut 2s forwards;
+}
+
+@keyframes goOut {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translate(100%, 0);
     }
 }
 
